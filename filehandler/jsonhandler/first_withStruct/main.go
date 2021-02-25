@@ -1,9 +1,9 @@
 package main
 
 import (
-	"encoding/json"	"fmt"
+	"encoding/json"
+	"fmt"
 )
-
 
 type Author struct {
 	Name  string
@@ -50,7 +50,7 @@ func main() {
 	}]
 	`
 
-	var data []Article //JSON 문서의 데이터를 저장할 구조체 슬라이스 선언
-	json.Unmarshal([]byte(doc), &data)     // doc의 내용을 변환하여 data에 저장
-	fmt.Println(data)    // [{1 Hello, world! {Maria maria@exa}}]
+	var data []Article                 //JSON 문서의 데이터를 저장할 구조체 슬라이스 선언
+	json.Unmarshal([]byte(doc), &data) // doc의 내용을 변환하여 data에 저장
+	fmt.Println(data)                  // [{1 Hello, world! {Maria maria@exa}}]
 }
